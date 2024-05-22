@@ -2,11 +2,9 @@ const express = require("express");
 
 const router = express.Router();
 
-/* ************************************************************************* */
-// Define Your API Routes Here
-/* ************************************************************************* */
+const { getCategories } = require("../../../controllers/categoryActions");
 
-/* Here you code */
+router.get("/", getCategories);
 
 /* ************************************************************************* */
 

@@ -1,5 +1,3 @@
-// Some data to make the trick
-
 const categories = [
   {
     id: 1,
@@ -11,10 +9,8 @@ const categories = [
   },
 ];
 
-// Declare the actions
+const getCategories = (req, res) => {
+  res.json(categories);
+};
 
-/* Here you code */
-
-// Export them to import them somewhere else
-
-module.exports = { categories };
+module.exports = { categories, getCategories };

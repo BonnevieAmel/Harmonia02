@@ -1,7 +1,8 @@
 const express = require("express");
-const { browse, read } = require("../../../controllers/programActions");
 
 const router = express.Router();
+
+const { browse, read } = require("../../../controllers/programActions");
 
 router.get("/", browse);
 router.get("/:id", read);

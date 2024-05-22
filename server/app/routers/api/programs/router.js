@@ -1,8 +1,9 @@
 const express = require("express");
-const { browse } = require("../../../controllers/programActions");
+const { browse, read } = require("../../../controllers/programActions");
 
 const router = express.Router();
 
 router.get("/", browse);
+router.get("/:id", read);
 
 module.exports = router;

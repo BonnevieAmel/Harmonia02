@@ -2,9 +2,13 @@ const express = require("express");
 
 const router = express.Router();
 
-const { getCategories } = require("../../../controllers/categoryActions");
+const {
+  getCategories,
+  findById,
+} = require("../../../controllers/categoryActions");
 
 router.get("/", getCategories);
+router.get("/:id", findById);
 
 /* ************************************************************************* */
 

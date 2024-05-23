@@ -2,13 +2,10 @@ const express = require("express");
 
 const router = express.Router();
 
-const {
-  getCategories,
-  findById,
-} = require("../../../controllers/categoryActions");
+const { browse, read } = require("../../../controllers/categoryActions");
 
-router.get("/", getCategories);
-router.get("/:id", findById);
+router.get("/", browse);
+router.get("/:id", read);
 
 /* ************************************************************************* */
 

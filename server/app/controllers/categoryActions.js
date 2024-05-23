@@ -9,10 +9,10 @@ const categories = [
   },
 ];
 
-const getCategories = (req, res) => {
+const browse = (req, res) => {
   res.json(categories);
 };
-const findById = (req, res) => {
+const read = (req, res) => {
   const parsedId = parseInt(req.params.id, 10);
   const category = categories.find((cat) => cat.id === parsedId);
   if (category) {
@@ -22,4 +22,4 @@ const findById = (req, res) => {
   }
 };
 
-module.exports = { categories, getCategories, findById };
+module.exports = { categories, browse, read };

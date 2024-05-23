@@ -11,7 +11,7 @@ router.get("/", sayWelcome);
 /* ************************************************************************* */
 
 /* *************************************************************** */
-const categoriesRouter = require("./categories/router");
+const categoriesRouter = require("./category/router");
 
 router.use("/categories", categoriesRouter);
 /* ************************************************************************* */

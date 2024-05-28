@@ -20,7 +20,7 @@ CREATE TABLE category (
 CREATE TABLE program (
   id INT PRIMARY KEY auto_increment not null,
   title VARCHAR(255) NOT NULL,
-  synopsys TEXT NOT NULL,
+  synopsis TEXT NOT NULL,
   poster TEXT,
   country VARCHAR(100) NOT NULL,
   year INT NOT NULL,

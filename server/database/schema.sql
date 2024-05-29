@@ -11,19 +11,18 @@ create table item (
   foreign key(user_id) references user(id)
 );
 
-CREATE TABLE category (
-  id INT PRIMARY KEY,
-  name VARCHAR(100) NOT NULL
+create table category(
+ id int unsigned primary key auto_increment not null,
+ name varchar(100)
 );
 
-
-CREATE TABLE program (
-  id INT PRIMARY KEY auto_increment not null,
-  title VARCHAR(255) NOT NULL,
-  synopsis TEXT NOT NULL,
-  poster TEXT,
-  country VARCHAR(100) NOT NULL,
-  year INT NOT NULL,
-  category_id INT,
-  FOREIGN KEY (category_id) REFERENCES category(id)
+create table program(
+  id int unsigned primary key auto_increment not null,
+  title varchar(200) not null,
+  synopsis text not null,
+  poster varchar(200),
+  country varchar(100),
+  year int not null,
+  category_id int unsigned not null,
+  foreign key(category_id) references category(id)
 );
